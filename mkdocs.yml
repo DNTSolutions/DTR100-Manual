@@ -1,6 +1,6 @@
 site_name: DTR100 Grinder Manual
 site_description: Technical Manual for DTR100 Electrode Grinder
-site_author: Your Company Name
+site_author: DNT Solutions Ltd
 site_url: https://DNTSolutions.github.io/DTR100-Manual/
 
 repo_name: DTR100-Manual
@@ -8,6 +8,7 @@ repo_url: https://github.com/DNTSolutions/DTR100-Manual
 
 theme:
   name: material
+  custom_dir: material/overrides
   language: en
   palette:
     - scheme: default
@@ -24,12 +25,13 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs          # tabs trên đầu
-    - navigation.tabs.sticky   # tabs cố định khi scroll
+    #- navigation.tabs.sticky   # tabs cố định khi scroll
     - navigation.sections      # sidebar có section rõ ràng
     - navigation.top           # nút "Back to top"
+    - navigation.expand       # tự động mở section sidebar khi vào trang
     - search.highlight         # highlight kết quả search
     - search.suggest           # gợi ý khi gõ search
-    - content.code.copy        # nút copy code block
+    #- content.code.copy        # nút copy code block
     - toc.integrate            # Table of Contents tích hợp sidebar
   font:
     text: Roboto
@@ -43,6 +45,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/DNTSolutions
+  copyright: Copyright &copy; 2026 DNT Solutions Ltd & DreamWeldTech. All rights reserved.
+  generator: false
 
 markdown_extensions:
   - admonition                 # hộp note/warning/tip
@@ -61,21 +65,13 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: getting-started/overview.md
-      - Safety Warning: getting-started/safety.md
-      - Installation: getting-started/installation.md
-  - Hardware:
-      - Machine Overview: hardware/overview.md
-      - Specifications: hardware/specifications.md
-      - Wiring Diagram: hardware/wiring.md
-      - Spare Parts: hardware/spare-parts.md
-  - Software:
-      - System Requirements: software/requirements.md
-      - Setup Guide: software/setup.md
-      - Parameters: software/parameters.md
+    - Overview: getting-started/overview.md
+    - Safety Warning: getting-started/safety.md
+    - Installation: getting-started/installation.md
+    - Insider: getting-started/insider.md
   - Operation:
-      - Basic Operation: operation/basic.md
-      - Electrode Grinding: operation/electrode-grinding.md
-      - Maintenance: operation/maintenance.md
+    - Basic Operation: operation/basic.md
+    - Electrode Grinding: operation/electrode-grinding.md
+    - Maintenance: operation/maintenance.md
   - Troubleshooting: troubleshooting.md
-  - Changelog: changelog.md
+  - Parts: parts.md
